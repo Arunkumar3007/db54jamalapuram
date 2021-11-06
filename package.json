@@ -1,0 +1,23 @@
+{
+  "name": "fwb54jamalapuram",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "^4.3.2",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "description": "jamala lab\u001b[D\u001b[D\u001b[D\u001b[Dpuram lab heroku",
+  "main": "app.js",
+  "keywords": [
+    "xyz"
+  ],
+  "author": "arun",
+  "license": "ISC"
+}
