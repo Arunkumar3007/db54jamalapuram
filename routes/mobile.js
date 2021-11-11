@@ -3,5 +3,5 @@ const mobile_controlers= require('../controllers/mobile');
 var router = express.Router(); 
  
 /* GET costumes */ 
-router.get('/', mobile_controlers.mobile_view_all_Page ); 
+router.put('/mobile/:id', mobile_controlers.mobile_update_put); 
 module.exports = router; 
