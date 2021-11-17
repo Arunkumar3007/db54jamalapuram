@@ -1,7 +1,7 @@
 var express = require('express'); 
-const mobile_controlers= require('../controllers/mobile'); 
+const mobile_controller = require('../controllers/mobile'); 
 var router = express.Router(); 
  
 /* GET costumes */ 
-router.put('/mobile/:id', mobile_controlers.mobile_update_put); 
+router.get('/detail', mobile_controller.mobile_view_one_Page);
 module.exports = router; 

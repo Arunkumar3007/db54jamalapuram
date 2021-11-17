@@ -55,9 +55,16 @@ exports.mobile_detail = async function(req, res) {
     } 
 }; 
  
-// Handle Mobile delete form on DELETE. 
-exports.mobile_delete = function(req, res) { 
-    res.send('NOT IMPLEMENTED: Mobile delete DELETE ' + req.params.id); 
+exports.mobile_delete = async function(req, res) { 
+    console.log("delete "  + req.params.id) 
+    try { 
+        result = await mobiles.findByIdAndDelete( req.params.id) 
+        console.log("Removed " + result) 
+        res.send(result) 
+    } catch (err) { 
+        res.status(500) 
+        res.send(`{"error": Error deleting ${err}}`); 
+    } 
 }; 
  
 // Handle Mobile update form on PUT. 
@@ -80,3 +87,17 @@ ${JSON.stringify(req.body)}`)
 failed`); 
     } 
 }; 
+
+// Handle a show one view with id specified by query 
+exports.mobile_view_one_Page = async function(req, res) {
+    console.log("single view for id " + req.query.id)
+    try{
+    result = await mobiles.findById( req.query.id)
+    res.render('mobiledetail',
+   { title: 'mobile Detail', toShow: result });
+    }
+    catch(err){
+    res.status(500)
+    res.send(`{'error': '${err}'}`);
+    }
+   };

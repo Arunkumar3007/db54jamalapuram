@@ -1,0 +1,20 @@
+extends layout
+block content
+ h1= title
+ - let mobileid = toShow._id
+ - let mobile_type = toShow.type
+ - let mobilename = toShow.name
+ - let mobilecost = toShow.cost
+ div
+    div.row
+      div(class='mobileAttr mr-3') mobile Id is:
+      div #{mobileid}
+    div.row
+      div(class='mobileAttr mr-3') mobile Type is:
+      div #{mobile_type}
+    div.row
+      div(class='mobileAttr mr-3') mobile Name is:
+      div #{mobilename}
+    div.row
+      div(class='mobileAttr mr-3') mobile Cost is:
+      div #{mobilecost}
