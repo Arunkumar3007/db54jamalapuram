@@ -22,6 +22,18 @@ router.get('/mobile', mobile_controller.mobile_list);
 /* GET detail mobile page */
 
 /* GET detail mobile page */ 
-router.get('/detail', mobile_controller.mobile_view_one_Page); 
+router.get('/detail', mobile_controller.mobile_view_one_Page);
+
+
+
+router.get('/create', mobile_controller.mobile_create_Page);
+
+
+
+router.get('/update', mobile_controller.mobile_update_Page);
+
+
+
+router.get('/delete', mobile_controller.mobile_delete_Page);
 
 module.exports = router;

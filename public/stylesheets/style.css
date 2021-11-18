@@ -11,3 +11,9 @@ a {
   background-color: rgb(146, 127, 255);
   width: 120px;
 }
+
+.detailAttr {
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
