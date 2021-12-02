@@ -12,7 +12,7 @@ block content
         input#name(type='text', name='name')
     div.form-group
         label.mobileAttr(for='cost') mobile Cost
-        input#cost(type='number', name='cost')
+        input#cost(type='number', name='cost' min=0, max=35)
     input.button(type="submit")
 
   script. 
@@ -25,7 +25,7 @@ block content
       }).then((resp) => { 
         return resp.text(); // or resp.text() or whatever the server sends 
       }).then((body) => { 
-        alert("Save succeded") 
+        alert("Mobile cost should be $45 minimum") 
         // TODO handle body 
       }).catch((error) => { 
         // TODO handle error 

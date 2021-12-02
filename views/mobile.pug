@@ -2,6 +2,10 @@ extends layout
 
 block content
   h1= title
+  - let createView = `dispatch(\mobile/create\")`  
+  button.btn(class="btn-primary m1-2", onclick=createView) Create
+
+
   - var results = results
   div(class="container-fuild")
     div(class="row m-1")

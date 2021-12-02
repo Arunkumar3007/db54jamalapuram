@@ -19,4 +19,5 @@ const secured = (req, res, next) => {
   }
 
 router.get('/update', secured, mobile_controller.mobile_update_Page);
+router.get('/create', secured, mobile_controller.mobile_create_Page);
 module.exports = router;
